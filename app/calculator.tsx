@@ -134,7 +134,7 @@ export default function Bmi() {
                   style={[styles.buttonText, { color: "#ffffff" }]}
                   onPress={handleCal}
                 >
-                  คํานวณค่ารถ
+                  คํานวณราคา
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.buttonReset}>
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   textInput: {
-    backgroundColor: "#dfdddd",
+    backgroundColor: "#ecececff",
     borderRadius: 6,
     padding: 11,
     marginBottom: 10,

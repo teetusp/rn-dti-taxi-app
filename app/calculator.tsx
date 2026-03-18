@@ -1,15 +1,15 @@
 import { Image } from "expo-image";
 import React, { useState } from "react";
 import {
-    Keyboard,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 export default function Bmi() {
   const [distance, setDistance] = useState("");
@@ -102,6 +102,8 @@ export default function Bmi() {
             style={styles.imglogo}
           />
           <Text style={styles.appname}>คำนวนค่าแท็กซี่</Text>
+
+          {/*ป้อนระยะทาง */}
           <View style={styles.cardInput}>
             <Text style={styles.labelInput}>ระยะทาง (กิโลเมตร)</Text>
             <TextInput
@@ -112,7 +114,7 @@ export default function Bmi() {
               onChangeText={setDistance}
               placeholderTextColor="#9e9e9eff"
             />
-
+            {/*ป้อนเวลาที่รถติด */}
             <Text style={styles.labelInput}>เวลาที่รถติด (นาที)</Text>
             <TextInput
               placeholder="0"
@@ -129,6 +131,7 @@ export default function Bmi() {
                 marginTop: 20,
               }}
             >
+              {/*ปุ่มคํานวณ */}
               <TouchableOpacity style={styles.buttonCal}>
                 <Text
                   style={[styles.buttonText, { color: "#ffffff" }]}
@@ -137,6 +140,8 @@ export default function Bmi() {
                   คํานวณราคา
                 </Text>
               </TouchableOpacity>
+
+              {/*ปุ่มล้างค่า */}
               <TouchableOpacity style={styles.buttonReset}>
                 <Text
                   style={[styles.buttonText, { color: "red" }]}
@@ -147,6 +152,7 @@ export default function Bmi() {
               </TouchableOpacity>
             </View>
           </View>
+          {/* ส่วนแสดงค่าโดยสาร*/}
           <View style={styles.cardResult}>
             <Text
               style={[styles.textResult, { fontSize: 18, textAlign: "center" }]}
@@ -172,13 +178,16 @@ export default function Bmi() {
                 บาท
               </Text>
             </Text>
+
+            {/* เส้นแบ่ง*/}
             <View style={styles.divider}></View>
+
             <View style={styles.row}>
               <Text style={[styles.textResult, { fontSize: 14 }]}>
                 ค่าโดยสารตามระยะทาง
               </Text>
               <Text style={[styles.textResult, { fontSize: 14 }]}>
-                {pricePerDistance} บาท
+                {pricePerDistance} ฿
               </Text>
             </View>
             <View style={styles.row}>
@@ -186,7 +195,7 @@ export default function Bmi() {
                 ค่ารถติด (นาที)
               </Text>
               <Text style={[styles.textResult, { fontSize: 14 }]}>
-                {pricePerTrafficJam} บาท
+                {pricePerTrafficJam} ฿
               </Text>
             </View>
           </View>

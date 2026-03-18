@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
   imglogo: {
     width: 150,
     height: 150,

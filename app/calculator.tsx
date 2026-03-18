@@ -95,7 +95,7 @@ export default function Bmi() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={{ flex: 1 }}
     >
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={styles.container}>
           <Image
             source={require("@/assets/images/taxi.png")}
